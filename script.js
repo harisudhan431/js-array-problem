@@ -110,7 +110,58 @@ for (let i = 0; i < arr.length; ++i) {
         return;
     }
 }
+// 16.Array Rotation
+ let arr8 =[1,2,3,4,5];
+console.log(rotating(arr8,2));
+ function rotating(arr,n){
+    for (let i = 0; i < n; i++) {
+        arr.unshift(arr.pop());
+    }
+  
+    return arr;
+ }
 
+
+//  17.Inserting a item in specific position
+
+const array = [1, 2, 4, 5];
+array.splice(3, 0, 3);
+
+console.log(array);
+
+// 18.Intersection of two array
+
+let first_array = [1, 3, 5, 7, 9];
+let second_array = [2, 3, 4, 5, 6, 9];
+
+let new_array = first_array.filter(
+    (element) => second_array.includes(element));
+
+console.log(new_array);
+
+
+// 19. check two array are equality
+
+const a1= [1, 2, 3];
+const b2 = [1, 2, 3];
+console.log(arrayEquals(a1,b2));
+
+function arrayEquals(a1, b2) {
+    return Array.isArray(a1) &&Array.isArray(b2) && a1.length === b2.length &&a1.every((val, index) => val === b2[index]);
+}
+// 20.Array Object Sort
+let employees = [
+    { name: 'John', dob: 'Dec 15, 2007', score: 80 },
+    { name: 'Ana', dob: 'Jan 15, 2009', score: 75 },
+    { name: 'Zion', dob: 'Feb 15, 2011', score: 90 },
+  ];
+  
+  employees.sort((a, b) => b.score - a.score);
+  
+  employees.forEach((e) => {
+    console.log(`${e.name} ${e.score}`);
+  });
+  
 console.log(target + " is not present in the given array");
 }
 
