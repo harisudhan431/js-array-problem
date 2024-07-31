@@ -110,6 +110,9 @@ for (let i = 0; i < arr.length; ++i) {
         return;
     }
 }
+    let e=[1,5,9,8,7,5,4,5,7,2,1,2,9];
+firstoccurance(e,2);
+
 // 16.Array Rotation
  let arr8 =[1,2,3,4,5];
 console.log(rotating(arr8,2));
@@ -165,5 +168,67 @@ let employees = [
 console.log(target + " is not present in the given array");
 }
 
-let e=[1,5,9,8,7,5,4,5,7,2,1,2,9];
-firstoccurance(e,2);
+
+// 21Create a new array with given size
+
+  function CreateArraywithGivenSize(n){
+    let arr = new Array(n);
+    console.log(arr);
+  }
+CreateArraywithGivenSize(4);
+
+  
+//   22.Find the different between two arrays
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+
+const difference =
+    array1.filter((element) => !array2.includes(element));
+
+console.log(difference); 
+
+ // 23. Implementing stack with array
+let stack = []
+function isEmptyStack(){
+    return stack.length === 0;
+}
+function pushStack(element){
+    stack.push(element);
+    return stack;
+}
+function popStack(){
+    let val = stack[stack.length - 1];
+    stack.pop();
+    return val;
+}
+function peekStack(){
+    return stack[stack.length - 1];
+}
+
+// 24. creating array of array
+let nums1 = []
+nums.push([1,2,3,4])
+nums.push([5,6,7,8])
+nums.push([9,10,11,12])
+
+console.log(nums1)
+
+// 25 implementing queue with array
+let queue = []
+function isEmptyQueue(){
+    return queue.length === 0;
+}
+function pushQueue(element){
+    queue.unshift(element);
+    return queue;
+}
+function popQueue(){
+    let val = queue[0];
+    queue.pop();
+    return val;
+}
+function peekQueue(){
+    return queue[queue.length - 1];
+}
+
+  
